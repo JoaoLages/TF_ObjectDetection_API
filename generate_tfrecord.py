@@ -20,7 +20,7 @@ flags = tf.app.flags
 flags.DEFINE_string('data_path', '', 'where to save train.record')
 flags.DEFINE_string('images_path', '', 'path to resized images folder')
 flags.DEFINE_string('csv_path', '', 'path to csv bounding boxes')
-
+flags.DEFINE_string('file_name', '', 'train/test')
 
 FLAGS = flags.FLAGS
 
@@ -84,7 +84,7 @@ def create_tf_example(group, path):
 
 def main(_):
 #    for i in ['test', 'train']:
-  writer = tf.python_io.TFRecordWriter(os.path.join(FLAGS.data_path,'train.record'))
+  writer = tf.python_io.TFRecordWriter(os.path.join(FLAGS.data_path, "%s.record" % FLAGS.file_name))
   path = FLAGS.images_path
   examples = pd.read_csv(FLAGS.csv_path)
   grouped = split(examples, 'filename')

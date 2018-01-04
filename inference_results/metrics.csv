@@ -1,4 +1,4 @@
-PASCAL/PerformanceByCategory/AP@0.5IOU/cylinder,nan
-PASCAL/PerformanceByCategory/AP@0.5IOU/box,nan
-PASCAL/Precision/mAP@0.5IOU,nan
-PASCAL/PerformanceByCategory/AP@0.5IOU/sphere,nan
+PASCAL/PerformanceByCategory/AP@0.5IOU/cylinder,0.400251103012
+PASCAL/PerformanceByCategory/AP@0.5IOU/box,0.872334004691
+PASCAL/Precision/mAP@0.5IOU,0.611458092706
+PASCAL/PerformanceByCategory/AP@0.5IOU/sphere,0.561789170413
