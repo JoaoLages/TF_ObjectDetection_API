@@ -16,3 +16,10 @@ bash train_model.sh ${MODEL_CONFIG}
 
 # Test model on epoch 4000
 bash test_model.sh ${TEST} ${MODEL_CONFIG} 4000
+
+# Backup
+mkdir ${TRAIN}
+mkdir -p ${TRAIN}/${TEST}/
+cp -r data/ ${TRAIN}/${TEST}/
+cp -r train_dir/ ${TRAIN}/${TEST}/
+
