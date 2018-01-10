@@ -22,4 +22,5 @@ mkdir ${TRAIN}
 mkdir -p ${TRAIN}/${TEST}/
 cp -r data/ ${TRAIN}/${TEST}/
 cp -r train_dir/ ${TRAIN}/${TEST}/
+cp -r inference_results/ ${TRAIN}/${TEST}/
 
