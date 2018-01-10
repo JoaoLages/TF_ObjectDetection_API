@@ -18,9 +18,8 @@ bash train_model.sh ${MODEL_CONFIG}
 bash test_model.sh ${TEST} ${MODEL_CONFIG} 4000
 
 # Backup
-mkdir ${TRAIN}
-mkdir -p ${TRAIN}/${TEST}/
-cp -r data/ ${TRAIN}/${TEST}/
-cp -r train_dir/ ${TRAIN}/${TEST}/
-cp -r inference_results/ ${TRAIN}/${TEST}/
+mkdir -p ${TRAIN}/${TEST}/${MODEL_CONFIG}
+cp -r data/ ${TRAIN}/${TEST}/${MODEL_CONFIG}
+cp -r train_dir/ ${TRAIN}/${TEST}/${MODEL_CONFIG}
+cp -r inference_results/ ${TRAIN}/${TEST}/${MODEL_CONFIG}
 

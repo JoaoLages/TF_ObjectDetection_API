@@ -13,6 +13,8 @@ python models/research/object_detection/export_inference_graph.py \
 			    --trained_checkpoint_prefix ${TRAIN_DIR}/model.ckpt-${3} \
 				    --output_directory object_detection_graph
 
+mkdir -p inference_results
+
 python -m object_detection/inference/infer_detections \
 	--input_tfrecord_paths=data/test.record \
 	--output_tfrecord_path=inference_results/detections.tfrecord-00000-of-00001 \
@@ -24,5 +26,5 @@ python -m object_detection/metrics/offline_eval_map_corloc \
 	--eval_config_path=test_eval_config.pbtxt \
 	--input_config_path=test_input_config.pbtxt
 
-mkdir -f inference_results/tests_overlayed
+mkdir -p inference_results/tests_overlayed
 python overlay.py --images_path=${IMAGES_TEST_PATH} --save_path=inference_results/tests_overlayed
