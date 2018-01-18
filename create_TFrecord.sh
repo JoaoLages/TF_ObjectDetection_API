@@ -4,8 +4,8 @@ set -o nounset
 set -o pipefail
 
 DATA=data/
-RESIZE=/home/vislab/Colabs-2017-2018/object_detection/images/${2}_resize/
-CSV=/home/vislab/Colabs-2017-2018/object_detection/${2}.csv
+RESIZE=/home/vislab/Colabs-2017-2018/object_detection/SHAPES2018/${2}_resize/
+CSV=/home/vislab/Colabs-2017-2018/object_detection/SHAPES2018/${2}.csv
 
 cd ${DATA}/
 rm -f ${1}.record 

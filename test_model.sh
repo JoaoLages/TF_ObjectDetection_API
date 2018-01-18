@@ -4,7 +4,7 @@ set -o pipefail
 
 PIPELINE_CONFIG_FILE=${2}
 TRAIN_DIR=train_dir
-IMAGES_TEST_PATH=/home/vislab/Colabs-2017-2018/object_detection/images/${1}_resize
+IMAGES_TEST_PATH=/home/vislab/Colabs-2017-2018/object_detection/SHAPES2018/${1}_resize
 
 rm -rf object_detection_graph
 python models/research/object_detection/export_inference_graph.py \

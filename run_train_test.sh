@@ -3,8 +3,8 @@
 # export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 # cd ../../
 
-TRAIN=train_gg_easy
-TEST=test_gg_easy
+TRAIN=real/images/easy_1
+TEST=real/images/easy_2
 MODEL_CONFIG=data/ssd_mobilenet_v1_shapes.config
 
 # Create TF records
@@ -18,8 +18,8 @@ bash train_model.sh ${MODEL_CONFIG}
 bash test_model.sh ${TEST} ${MODEL_CONFIG} 4000
 
 # Backup
-mkdir -p ${TRAIN}/${TEST}/${MODEL_CONFIG}
-cp -r data/ ${TRAIN}/${TEST}/${MODEL_CONFIG}
-cp -r train_dir/ ${TRAIN}/${TEST}/${MODEL_CONFIG}
-cp -r inference_results/ ${TRAIN}/${TEST}/${MODEL_CONFIG}
+mkdir -p ${TEST}/${TRAIN}/${MODEL_CONFIG}
+cp -r data/ ${TEST}/${TRAIN}/${MODEL_CONFIG}
+cp -r train_dir/ ${TEST}/${TRAIN}/${MODEL_CONFIG}
+cp -r inference_results/ ${TEST}/${TRAIN}/${MODEL_CONFIG}
 
