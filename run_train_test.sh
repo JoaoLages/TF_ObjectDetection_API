@@ -3,8 +3,8 @@
 # export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 # cd ../../
 
-TRAIN=real/images/easy_1
-TEST=real/images/easy_2
+TRAIN=real/images/easy_2
+TEST=real/images/easy_1
 MODEL_CONFIG=data/ssd_mobilenet_v1_shapes.config
 
 # Create TF records
